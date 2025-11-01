@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>💎 ငွေကြေးစီမံကိန်း VIP</title>
+
+  <!-- မြန်မာစာဖောင့် -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>💎 ငွေကြေးစီမံကိန်း (VIP Version)</h1>
+    <p class="subtitle">နေ့စဉ်အသုံးများ၊ ဝင်ငွေထွက်ငွေ အလိုအလျောက်တွက်ချက်မှု</p>
+  </header>
+
+  <section class="input-area">
+    <h2>🧾 လုပ်ဆောင်ချက်ထည့်ပါ</h2>
+    <input id="desc" type="text" placeholder="အကြောင်းအရာ (ဥပမာ - အစာ၊ လစာ)" />
+    <input id="amount" type="number" inputmode="decimal" placeholder="ပမာဏ (ဥပမာ - 15000)" />
+    <select id="type">
+      <option value="income">ဝင်ငွေ</option>
+      <option value="expense">ထွက်ငွေ</option>
+    </select>
+    <button id="addBtn">ထည့်မည်</button>
+  </section>
+
+  <section class="summary">
+    <div class="summary-box">
+      <h3>နေ့စဉ် စုစုပေါင်း</h3>
+      <p id="dailyTotal">0 Ks</p>
+    </div>
+    <div class="summary-box">
+      <h3>လစဉ် စုစုပေါင်း</h3>
+      <p id="monthlyTotal">0 Ks</p>
+    </div>
+    <div class="summary-box balance">
+      <h3>လက်ကျန်ငွေ</h3>
+      <p id="balance">0 Ks</p>
+    </div>
+  </section>
+
+  <section class="progress-section">
+    <h2>📊 လုပ်ငန်းတိုးတက်မှု</h2>
+    <div class="progress-bar">
+      <div id="progressFill" class="progress-fill"></div>
+    </div>
+  </section>
+
+  <section class="history">
+    <h2>🕓 သမိုင်းစာရင်း</h2>
+    <table id="historyTable">
+      <thead>
+        <tr>
+          <th>ရက်စွဲ</th>
+          <th>အကြောင်းအရာ</th>
+          <th>အမျိုးအစား</th>
+          <th>ပမာဏ (Ks)</th>
+          <th>လုပ်ဆောင်ချက်</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="charts">
+    <h2>📈 ငွေဝင် / ထွက် ချက်များ</h2>
+    <canvas id="lineChart"></canvas>
+
+    <h2>🧩 အမျိုးအစားလိုက် Pie Chart</h2>
+    <canvas id="pieChart"></canvas>
+  </section>
+
+  <section class="controls">
+    <button id="exportBtn">CSV ဖိုင်အနေနဲ့ ထုတ်ယူမည်</button>
+    <button id="clearBtn">အချက်အလက်အားလုံးဖျက်မည်</button>
+
+    <label for="monthSelect">လရွေးချယ်ရန်:</label>
+    <input type="month" id="monthSelect" />
+  </section>
+
+  <footer>
+    <p>© 2025 VIP ငွေကြေးစီမံကိန်း | ထုတ်လုပ်သူ — Yan Paing Oo</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
